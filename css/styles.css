@@ -1,0 +1,30 @@
+body {
+	background: #ccc;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+h1 { font-size: 2em; margin-top: 0; }
+
+.state { display: none; }
+.state#menu { display: block; }
+
+.state#menu, .state#instructions { font-size: 0.3em; }
+
+#gamecontainer {
+	background: #fff;
+	height: 12em;
+	width: 8em;
+}
+
+#boardcontainer { float: left; height: 8em; position: relative; width: 8em; }
+#boardcontainer canvas { left: 0; position: absolute; top: 0; }
+#boardcontainer canvas.board { z-index: 10; }
+#queuecontainer { clear: both; height: 1em; margin: 0.25em auto; position: relative; width: 5em; }
+#queuecontainer canvas { left: 0; position: absolute; top: 0; }
+#timercontainer { height: 0.25em; margin: 0.25em auto; width: 5em; }
+#timercontainer div { background: green; height: 100%; width: 100%; }
+#timercontainer div.warning { background: #e3e355; }
+#timercontainer div.danger { background: red; height: 100%; width: 100%; }

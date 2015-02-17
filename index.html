@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="cache.manifest">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>GAME</title>
+    <meta name="description" content="GAME">
+    <meta name="author" content="Jamie Strachan">
+
+		<link rel="stylesheet" href="css/styles.css"/>
+
+    <script src="js/sizzle.js"></script>
+    <script src="js/requestAnimationFrame.js"></script>
+    <script src="js/GAME.js"></script>
+    <script src="js/GAME.dom.js"></script>
+    <script src="js/GAME.Piece.js"></script>
+    <script src="js/GAME.queue.js"></script>
+    <script src="js/GAME.board.js"></script>
+    <script src="js/GAME.timer.js"></script>
+    <script src="js/GAME.scorekeeper.js"></script>
+    <script src="js/GAME.display.js"></script>
+    <script src="js/GAME.input.js"></script>
+    <script src="js/GAME.states.js"></script>
+    <script src="js/GAME.states.game.js"></script>
+    <script src="js/GAME.controller.js"></script>
+    <script src="js/init.js"></script>
+
+<!--#include virtual="/_inc/ga.html" -->
+    
+</head>
+<body>
+
+  <div id="gamecontainer">
+    <div class="state" id="splash">
+    	<h1 class="logo">GAME</h1>
+    </div>
+  
+    <div class="state" id="install">
+     	<h1 class="logo">GAME</h1>
+   </div>
+  
+    <div class="state" id="menu">
+    	<h1 class="logo">GAME</h1>
+      <ul class="options">
+      	<li><button class="start" data-state="game" data-stateinfo="freeplay">Freeplay</button></li>
+        <li><button class="start" data-state="game" data-stateinfo="timed">Timed</button></li>
+        <li><button data-state="instructions">How to Play</button></li>
+      </ul>
+    </div>
+  
+    <div class="state" id="instructions">
+      <h1 class="logo">GAME</h1>
+      <h2>How to Play</h2>
+      <p>Clear pieces off the board by making sets of 3. Sound easy? Hang on. Let's talk about what makes a set.</p>
+      <p>All pieces have 3 characteristics: colour, shape, and value. To make a set, all 3 pieces in the set must have each characteristic be all the same or all different. How about some show and tell?</p>
+      <p>These are sets:</p>
+      <ul>
+        <li><div class="gamepiece c1 s1">1</div> <div class="gamepiece c1 s1">1</div> <div class="gamepiece c1 s1">1</div> <div class="note">(color: all same, shape: all same, value: all same)</div></li>
+        <li><div class="gamepiece c2 s1">2</div> <div class="gamepiece c2 s2">2</div> <div class="gamepiece c2 s3">2</div> <div class="note">(color: all same, shape: all different, value: all same)</div></li>
+        <li><div class="gamepiece c2 s3">3</div> <div class="gamepiece c3 s3">1</div> <div class="gamepiece c1 s3">2</div> <div class="note">(color: all different, shape: all same, value: all different)</div></li>
+      </ul>
+      <p>These are not sets:</p>
+      <ul>
+        <li><div class="gamepiece c2 s1">3</div> <div class="gamepiece c2 s1">3</div> <div class="gamepiece c1 s1">3</div> <div class="note">(<strong>color: not all same/different</strong>, shape: all same, value: all same)</div></li>
+        <li><div class="gamepiece c3 s2">1</div> <div class="gamepiece c2 s1">3</div> <div class="gamepiece c1 s3">1</div> <div class="note">(color: all different, shape: all different, <strong>value: not all same/different</strong>)</div></li>
+      </ul>
+      <p>Still with me? Then give it a shot. "Freeplay" mode will let you put pieces on the board at your own pace but "Timed" mode only gives you a limited time to make your move. If the timer runs out, the piece gets placed randomly. You know, just in case the game isn't hard enough already.</p>
+      <p>If you're ready, just choose a mode to start the game: <button class="start" data-state="game" data-stateinfo="freeplay">Freeplay</button> <button class="start" data-state="game" data-stateinfo="timed">Timed</button></p>
+    </div>
+  
+    <div class="state piecesize" id="game">
+    	<div id="boardcontainer"></div>
+      <div id="queuecontainer"></div>
+      <div id="timercontainer"></div>
+      <div id="scorecontainer"></div>
+    </div>
+  
+    <div class="state" id="gameover">
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,24 @@
+- test all areas are properly clickable
+- test Game Over
+- animate set removal
+- save game
+- highlight playable areas
+- "level up"
+-- speed up timer
+-- when?
+- add score chaining
+- handle different screen sizes
+-- size board
+-- reposition queue
+- better name
+- design
+-- pieces
+-- queue
+-- board
+-- logo
+- splash screen
+- instructions
+- decide queue length
+- settings screen
+-- timer on/off, # of attributes, queue length
+- hover state for playable areas?
