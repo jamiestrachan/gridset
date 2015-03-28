@@ -36,5 +36,5 @@ GAME.scorekeeper = (function () {
 		getMultiplier: getMultiplier,
 		scoreSets: scoreSets,
 		scoreEmptyBoard: scoreEmptyBoard
-	}
+	};
 }());
